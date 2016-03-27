@@ -1,5 +1,8 @@
 package com.mysogni.mysogni;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,6 +17,9 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        displaySplashIfFirsTime();
+
         setContentView(R.layout.activity_home);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -48,5 +54,20 @@ public class HomeActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void displaySplashIfFirsTime(){
+        SharedPreferences prefs = this.getSharedPreferences(getString(R.string.preferences_key), Context.MODE_PRIVATE);
+        boolean firstTime = prefs.getBoolean(getString(R.string.first_time), true);
+
+        if(firstTime){
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putBoolean(getString(R.string.first_time), false);
+            editor.commit();
+
+            Intent intent = new Intent(this, SplashActivity.class);
+            startActivity(intent);
+            this.finish();
+        }
     }
 }
