@@ -1,4 +1,4 @@
-package com.mysogni.mysogni;
+package com.mysogni.mysogni.fragments;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
@@ -6,12 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mysogni.mysogni.R;
+
 /**
  * A placeholder fragment containing a simple view.
  */
-public class HomeActivityFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
-    public HomeActivityFragment() {
+    public HomeFragment() {
     }
 
     @Override

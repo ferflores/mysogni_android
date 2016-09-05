@@ -1,8 +1,10 @@
 <resources>
-    <string name="app_name" translatable="false">Mysogni</string>
+    <string name="app_name" translatable="false">mysogni</string>
     <string name="title_activity_splash" translatable="false"></string>
     <string name="preferences_key" translatable="false">prefs_key</string>
-    <string name="first_time" translatable="false">firs_time3</string>
+    <string name="first_time" translatable="false">firs_time</string>
 
     <string name="action_settings">Settings</string>
+    <string name="set_date">Set date</string>
+
 </resources>
