@@ -12,6 +12,8 @@
     <string name="choosemood">Choose your dream mood</string>
     <string name="dreamtext">Dream:</string>
     <string name="assigntags">Assign tags to you dream</string>
+    <string name="selectedTags">Selected tags</string>
+    <string name="writeTag">Search or write a new tag here</string>
 
 
 </resources>
