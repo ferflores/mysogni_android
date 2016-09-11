@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background"
+    tools:context="com.mysogni.mysogni.fragments.TagSelectionFragment">
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:columnCount="2"
+        android:rowCount="20">
+
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="11"
+                android:layout_columnSpan="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/assigntags"
+                android:textColor="@color/whiteText"
+                android:id="@+id/textView4"
+                android:layout_row="1"
+                android:gravity="left"
+                android:layout_column="0"
+                android:padding="10dp"
+                android:layout_alignParentLeft="true" />
+
+            <Button
+                android:layout_columnSpan="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/next"
+                android:id="@+id/button"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/primaryBlue"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            android:id="@+id/textView3"
+            android:ems="20"
+            android:layout_row="4"
+            android:gravity="start"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:background="@drawable/dream_text_style"/>
+    </GridLayout>
+</LinearLayout>

@@ -4,10 +4,12 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
@@ -21,7 +23,7 @@ import java.util.GregorianCalendar;
 import java.util.Locale;
 
 
-public class NewDreamFragment extends Fragment {
+public class NewDreamFragment extends Fragment implements MoodSelectionFragment.OnFragmentInteractionListener{
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -63,7 +65,7 @@ public class NewDreamFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        View view = inflater.inflate(R.layout.fragment_new_dream, container, false);
+        View view = inflater.inflate(R.layout.fragment_newdream, container, false);
         setDefaults(view);
         bindEvents(view);
 
@@ -86,11 +88,23 @@ public class NewDreamFragment extends Fragment {
 
     private void bindEvents(View view){
         TextView datePicker = (TextView)view.findViewById(R.id.datePicker);
-
         datePicker.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                showDatePicker(v);
+            }
+        });
+
+        Button nextButton = (Button)view.findViewById(R.id.gotoFaces);
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment newFragment = new MoodSelectionFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+
+                transaction.replace(R.id.mainFragment, newFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
     }
@@ -137,6 +151,11 @@ public class NewDreamFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 
     public interface OnFragmentInteractionListener {

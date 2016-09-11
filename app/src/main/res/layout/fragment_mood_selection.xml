@@ -1,0 +1,113 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MoodSelectionFragment">
+
+
+    <LinearLayout
+        android:id="@+id/facesContainer"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/choosemood"
+            android:textColor="@color/whiteText"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/happyFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_happy"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/confusedFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_confused"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/excitedFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_excited"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/funFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_fun"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scaredFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_scared"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/impressedFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_impressed"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inLoveFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_inlove"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/madFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_mad"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/noEmotionFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_noemotion"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sadFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_sad"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/verySadFace"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/face_verysad"
+            android:contentDescription="@string/moodscontent"
+            android:padding="10dp" />
+    </LinearLayout>
+</ScrollView>
