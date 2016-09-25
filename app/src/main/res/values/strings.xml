@@ -14,6 +14,11 @@
     <string name="assigntags">Assign tags to you dream</string>
     <string name="selectedTags">Selected tags</string>
     <string name="writeTag">Search or write a new tag here</string>
+    <string name="search_create_tag">Search or create new tag</string>
+    <string name="select_tags">Select tags</string>
+    <string name="dream_saved">Your dream has been saved</string>
+    <string name="go_to_dream_list">Go to my dream list</string>
+    <string name="go_to_new_dream">Write new dream</string>
 
 
 </resources>

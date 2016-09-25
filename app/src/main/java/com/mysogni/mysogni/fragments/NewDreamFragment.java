@@ -64,7 +64,6 @@ public class NewDreamFragment extends Fragment implements MoodSelectionFragment.
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-
         View view = inflater.inflate(R.layout.fragment_newdream, container, false);
         setDefaults(view);
         bindEvents(view);

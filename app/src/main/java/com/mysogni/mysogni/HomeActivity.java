@@ -10,13 +10,16 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mysogni.mysogni.fragments.DreamListFragment;
+import com.mysogni.mysogni.fragments.DreamSavedFragment;
 import com.mysogni.mysogni.fragments.MoodSelectionFragment;
 import com.mysogni.mysogni.fragments.NewDreamFragment;
 import com.mysogni.mysogni.fragments.TagSelectionFragment;
 
 public class HomeActivity extends AppCompatActivity implements NewDreamFragment.OnFragmentInteractionListener,
         MoodSelectionFragment.OnFragmentInteractionListener,
-        TagSelectionFragment.OnFragmentInteractionListener{
+        TagSelectionFragment.OnFragmentInteractionListener, DreamListFragment.OnFragmentInteractionListener,
+        DreamSavedFragment.OnFragmentInteractionListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

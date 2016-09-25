@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:inputType="textPersonName"
+        android:text=""
+        android:hint="@string/search_create_tag"
+        android:paddingLeft="15dp"
+        android:background="@drawable/dream_text_style"
+        android:textColor="@color/whiteText"
+        android:textColorHint="@color/colorPrimary"
+        android:ems="10"
+        android:id="@+id/editText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:textSize="25sp"
+            android:gravity="left"
+            android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:gravity="left"
+                    android:textColor="@color/whiteText"
+                    android:padding="5dp"
+                    android:text="test"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
