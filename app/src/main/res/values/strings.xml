@@ -19,6 +19,14 @@
     <string name="dream_saved">Your dream has been saved</string>
     <string name="go_to_dream_list">Go to my dream list</string>
     <string name="go_to_new_dream">Write new dream</string>
+    <string name="empty_dream_text">Please input your dream</string>
+    <string name="max_dream_text_chars">Dream text has a limit of 2000 characters</string>
+    <string name="illegal_chars_dream_chars">Only the following characters are allowed: a-z 0-9 _ - ? []</string>
+    <string name="empty_tag_text">Please input the tag text</string>
+    <string name="max_tag_chars">Tag text has a max value of 25 characters</string>
+    <string name="illegal_chars_tag">Only the following characters are allowed: a-z 0-9 _ - (no spaces)</string>
+    <string name="empty_dream_date">Please input your dream date</string>
+    <string name="future_date">You can not dream on a future date, can you?</string>
 
 
 </resources>

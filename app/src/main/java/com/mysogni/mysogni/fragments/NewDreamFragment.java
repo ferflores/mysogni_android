@@ -11,9 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mysogni.mysogni.R;
+import com.mysogni.mysogni.models.ValidationResult;
+import com.mysogni.mysogni.shared.CurrentData;
+import com.mysogni.mysogni.shared.Validator;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -83,6 +88,7 @@ public class NewDreamFragment extends Fragment implements MoodSelectionFragment.
         Date today = new Date();
         TextView datePickerText = (TextView)view.findViewById(R.id.datePicker);
         datePickerText.setText(dateFormat.format(today));
+        CurrentData.setCreatedOn(today);
     }
 
     private void bindEvents(View view){
@@ -98,14 +104,24 @@ public class NewDreamFragment extends Fragment implements MoodSelectionFragment.
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new MoodSelectionFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                ValidationResult validation = ValidateDream();
+                if(!validation.isError) {
+                    Fragment newFragment = new MoodSelectionFragment();
+                    FragmentTransaction transaction = getFragmentManager().beginTransaction();
 
-                transaction.replace(R.id.mainFragment, newFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+                    transaction.replace(R.id.mainFragment, newFragment);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
+                }else{
+                    Toast.makeText(getContext(), validation.message, Toast.LENGTH_SHORT).show();
+                }
             }
         });
+    }
+
+    private ValidationResult ValidateDream(){
+        String dreamText = ((EditText)this.getView().findViewById(R.id.dreamText)).getText().toString();
+        return Validator.ValidateDreamText(dreamText, getResources());
     }
 
     private void showDatePicker(final View mainView){
@@ -127,7 +143,14 @@ public class NewDreamFragment extends Fragment implements MoodSelectionFragment.
 
                 Date selectedDate = calendar.getTime();
 
-                datePickerText.setText(dateFormat.format(selectedDate));
+                ValidationResult validation = Validator.ValidateDate(selectedDate, getResources());
+
+                if(validation.isError){
+                    Toast.makeText(getContext(), validation.message, Toast.LENGTH_SHORT).show();
+                }else{
+                    datePickerText.setText(dateFormat.format(selectedDate));
+                    CurrentData.setCreatedOn(selectedDate);
+                }
 
                 alertDialog.dismiss();
             }});
